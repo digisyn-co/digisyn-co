@@ -9,6 +9,6 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Deploy via webhook
+      - name: Hard reset server to latest commit
         run: |
           curl -s -k "https://digisyn.co/deploy.php?secret=digisyn2026"

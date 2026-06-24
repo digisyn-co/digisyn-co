@@ -7,5 +7,13 @@ if ($provided !== $secret) {
     die('Forbidden');
 }
 
-$output = shell_exec('cd /home/digisync/public_html && git fetch origin && git reset --hard origin/main 2>&1');
+$repo = '/home/digisync/public_html';
+$commands = [
+    "cd {$repo}",
+    "git fetch origin --prune",
+    "git reset --hard origin/main",
+    "git clean -fd",
+];
+
+$output = shell_exec(implode(' && ', $commands) . ' 2>&1');
 echo "Deploy complete:\n" . $output;
