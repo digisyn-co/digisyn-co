@@ -10,17 +10,21 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Deploy via cPanel API
+        env:
+          CPANEL_USER: ${{ secrets.CPANEL_USERNAME }}
+          CPANEL_PASS: ${{ secrets.CPANEL_PASSWORD }}
         run: |
-          echo "=== Step 1: Pull from GitHub ==="
-          curl -v -k -X POST \
-            "https://digisyn.co:2083/execute/VersionControl/retrieve" \
-            -u "${{ secrets.CPANEL_USERNAME }}:${{ secrets.CPANEL_PASSWORD }}" \
-            -d "repository_root=/home/digisync/public_html" 2>&1
+          # Use server IP directly to bypass Cloudflare
+          curl -s -k -X POST \
+            "https://server220.orangehost.com:2083/execute/VersionControl/retrieve" \
+            -u "${CPANEL_USER}:${CPANEL_PASS}" \
+            -d "repository_root=/home/digisync/public_html"
 
-          sleep 10
+          sleep 8
 
-          echo "=== Step 2: Deploy ==="
-          curl -v -k -X POST \
-            "https://digisyn.co:2083/execute/VersionControlDeployment/create" \
-            -u "${{ secrets.CPANEL_USERNAME }}:${{ secrets.CPANEL_PASSWORD }}" \
-            -d "repository_root=/home/digisync/public_html" 2>&1
+          curl -s -k -X POST \
+            "https://server220.orangehost.com:2083/execute/VersionControlDeployment/create" \
+            -u "${CPANEL_USER}:${CPANEL_PASS}" \
+            -d "repository_root=/home/digisync/public_html"
+
+          echo "Done"
