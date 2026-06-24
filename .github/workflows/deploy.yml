@@ -9,15 +9,19 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Deploy via SSH
-        uses: appleboy/ssh-action@v1.0.3
-        with:
-          host: digisyn.co
-          username: digisync
-          key: ${{ secrets.SSH_PRIVATE_KEY }}
-          port: 7331
-          script: |
-            cd /home/digisync/public_html
-            git fetch origin --prune
-            git reset --hard origin/main
-            git clean -fd
+      - name: Deploy via cPanel API
+        run: |
+          # Pull latest from GitHub into cPanel's git repo
+          RESULT=$(curl -s -k -X POST \
+            "https://digisyn.co:2083/execute/VersionControl/retrieve" \
+            -u "${{ secrets.CPANEL_USERNAME }}:${{ secrets.CPANEL_PASSWORD }}" \
+            -d "repository_root=/home/digisync/public_html")
+          echo "Pull result: $RESULT"
+          sleep 8
+
+          # Run deployment task (executes .cpanel.yml which does git reset --hard)
+          RESULT2=$(curl -s -k -X POST \
+            "https://digisyn.co:2083/execute/VersionControlDeployment/create" \
+            -u "${{ secrets.CPANEL_USERNAME }}:${{ secrets.CPANEL_PASSWORD }}" \
+            -d "repository_root=/home/digisync/public_html")
+          echo "Deploy result: $RESULT2"

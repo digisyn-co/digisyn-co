@@ -1,7 +1,6 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/digisync/public_html
-    - /usr/bin/git -C $DEPLOYPATH fetch origin --prune
-    - /usr/bin/git -C $DEPLOYPATH reset --hard origin/main
-    - /usr/bin/git -C $DEPLOYPATH clean -fd
+    - /usr/bin/git -C /home/digisync/public_html fetch origin --prune
+    - /usr/bin/git -C /home/digisync/public_html reset --hard origin/main
+    - /usr/bin/git -C /home/digisync/public_html clean -fd
