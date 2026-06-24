@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 Sitemap: https://digisyn.co/sitemap.xml
 <!-- auto-deploy test Wed Jun 24 15:21:07 UTC 2026 -->
+<!-- Wed Jun 24 16:05:58 UTC 2026 -->
