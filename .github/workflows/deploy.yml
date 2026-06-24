@@ -14,7 +14,6 @@ jobs:
           CPANEL_USER: ${{ secrets.CPANEL_USERNAME }}
           CPANEL_PASS: ${{ secrets.CPANEL_PASSWORD }}
         run: |
-          # Use server IP directly to bypass Cloudflare
           curl -s -k -X POST \
             "https://server220.orangehost.com:2083/execute/VersionControl/retrieve" \
             -u "${CPANEL_USER}:${CPANEL_PASS}" \
@@ -26,5 +25,3 @@ jobs:
             "https://server220.orangehost.com:2083/execute/VersionControlDeployment/create" \
             -u "${CPANEL_USER}:${CPANEL_PASS}" \
             -d "repository_root=/home/digisync/public_html"
-
-          echo "Done"

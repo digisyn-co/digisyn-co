@@ -1,6 +1,4 @@
 ---
 deployment:
   tasks:
-    - /usr/bin/git -C /home/digisync/public_html fetch origin --prune
-    - /usr/bin/git -C /home/digisync/public_html reset --hard origin/main
-    - /usr/bin/git -C /home/digisync/public_html clean -fd
+    - /usr/bin/git -C /home/digisync/public_html pull origin main
