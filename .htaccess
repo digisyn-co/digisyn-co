@@ -1,9 +1,20 @@
-# Force non-www
+# ── Force HTTPS (if not already handled by server)
 RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
+# ── Force non-www
 RewriteCond %{HTTP_HOST} ^www\.digisyn\.co [NC]
 RewriteRule ^ https://digisyn.co%{REQUEST_URI} [R=301,L]
 
-# Clean URLs — serve /slug as /slug/index.html
+# ── Add trailing slash to directories (prevents 301 redirect chain)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-l
+RewriteCond %{REQUEST_URI} !/$
+RewriteCond %{REQUEST_URI} !\.[a-zA-Z0-9]{1,6}$
+RewriteRule ^(.*)$ /$1/ [R=301,L]
+
+# ── Serve index.html for clean URLs
 DirectoryIndex index.html
 Options -Indexes
 
@@ -12,5 +23,5 @@ RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}/index.html -f
 RewriteRule ^(.+?)/?$ /$1/index.html [L]
 
-# Custom 404
+# ── Custom 404
 ErrorDocument 404 /404.html
