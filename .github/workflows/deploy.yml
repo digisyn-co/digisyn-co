@@ -1,0 +1,14 @@
+name: Deploy to cPanel
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy via webhook
+        run: |
+          curl -s -k "https://digisyn.co/deploy.php?secret=digisyn2026"

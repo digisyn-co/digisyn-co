@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" type="image/png" href="/images/favicon.png">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>What Is Enterprise Content Management? The Definitive 2026 Guide | Digisyn Co.</title>
+<meta name="description" content="Enterprise Content Management (ECM) is the strategy and technology to capture, store, manage, secure, and deliver business documents across their lifecycle. A plain-English 2026 guide: components, benefits, AI, ECM vs DMS vs CMS, and how to choose.">
+<link rel="canonical" href="https://digisyn.co/blog/what-is-enterprise-content-management">
+<meta property="og:title" content="What Is Enterprise Content Management? The Definitive 2026 Guide | Digisyn Co.">
+<meta property="og:description" content="A plain-English 2026 guide to Enterprise Content Management (ECM): what it is, how it works, the role of AI, ECM vs DMS vs CMS, and how to choose the right platform.">
+<meta property="og:image" content="https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=1400&h=600&fit=crop">
+<meta property="og:url" content="https://digisyn.co/blog/what-is-enterprise-content-management">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/styles-modern.css?v=20260526">
+<noscript><style>.reveal,.reveal-stagger>*{opacity:1!important;transform:none!important;}.mobile-menu{display:none!important;}</style></noscript>
+<script>
+var s=document.createElement('script');s.async=true;
+s.src='https://analytics.ahrefs.com/analytics.js';
+s.setAttribute('data-key','IvGv6btF+wxOo6+dJ6xh4Q');
+document.getElementsByTagName('head')[0].appendChild(s);
+</script>
+<style>
+/* Scoped helpers for this article (tables + FAQ) — safe, namespaced, uses inherited fonts/colors */
+.article-body .ecm-table-wrap{overflow-x:auto;margin:22px 0;}
+.article-body table.ecm-table{width:100%;border-collapse:collapse;font-size:.95rem;line-height:1.45;}
+.article-body table.ecm-table th,.article-body table.ecm-table td{text-align:left;padding:12px 14px;border-bottom:1px solid rgba(0,0,0,.10);vertical-align:top;}
+.article-body table.ecm-table thead th{font-family:'Poppins',sans-serif;font-weight:700;background:rgba(0,0,0,.035);}
+.article-body table.ecm-table tbody tr:nth-child(even){background:rgba(0,0,0,.02);}
+.article-body table.ecm-table td:first-child,.article-body table.ecm-table th:first-child{font-weight:600;}
+.article-body .snippet-box{border-left:4px solid currentColor;background:rgba(0,0,0,.035);padding:16px 20px;margin:22px 0;border-radius:8px;}
+.article-body .snippet-box p{margin:0;}
+.article-body .callout{background:rgba(0,0,0,.035);border-radius:10px;padding:16px 20px;margin:22px 0;}
+.article-body .callout p{margin:0;}
+.faq-list{margin:18px 0;display:flex;flex-direction:column;gap:10px;}
+.faq-item{border:1px solid rgba(0,0,0,.12);border-radius:10px;overflow:hidden;}
+.faq-item .faq-q{width:100%;text-align:left;cursor:pointer;background:transparent;border:0;padding:16px 18px;font-family:'Poppins',sans-serif;font-weight:600;font-size:1rem;display:flex;justify-content:space-between;gap:12px;align-items:center;}
+.faq-item .faq-q::after{content:'+';font-weight:600;opacity:.6;flex:none;}
+.faq-item.open .faq-q::after{content:'\2013';}
+.faq-item .faq-a{max-height:0;overflow:hidden;padding:0 18px;transition:max-height .25s ease,padding .25s ease;}
+.faq-item.open .faq-a{max-height:600px;padding:0 18px 18px;}
+.faq-item .faq-a p{margin:0;}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <div class="topbar-inner">
+    <div class="topbar-left">
+      <span class="topbar-dot"></span>
+      <span>Free written audit · Reply within 48 hours · No call required</span>
+    </div>
+    <div class="topbar-right">Sydney · Boston · Calgary · Est. 2019</div>
+  </div>
+</div>
+
+
+<nav class="nav" role="navigation" aria-label="Main navigation">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo"><span class="logo-mark" aria-hidden="true"></span>Digisyn<span>|</span>Co.</a>
+    <ul class="nav-links">
+      <li><a href="/">Home</a></li>
+      <li class="nav-dropdown">
+        <a href="/services">Services<span class="caret" aria-hidden="true"></span></a>
+        <div class="nav-dropdown-menu">
+          <div class="menu-label">What we handle</div>
+          <a href="/services/website-content-management">Content Management</a>
+          <a href="/services/web-design-and-development">Web Design &amp; Build</a>
+          <a href="/services/google-rankings-seo">SEO Setup</a>
+          <a href="/services/google-business-profile">Google Business Profile</a>
+          <a href="/services/social-media-management">Social Media</a>
+          <a href="/services/speed-and-mobile-optimization">Speed Optimization</a>
+        </div>
+      </li>
+      <li class="nav-dropdown">
+        <a href="/results">Our Wins<span class="caret" aria-hidden="true"></span></a>
+        <div class="nav-dropdown-menu">
+          <div class="menu-label">Proof &amp; work</div>
+          <a href="/results">Results &amp; Case Studies</a>
+          <a href="/portfolio">Portfolio</a>
+        </div>
+      </li>
+      <li><a href="/blog/">Free Resources</a></li>
+      <li><a href="/about">About</a></li>
+      <li class="nav-cta"><a href="/contact">Free Audit</a></li>
+    </ul>
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="/">Home</a>
+  <a href="/services">Services</a>
+  <div class="mobile-sub">
+    <div class="mobile-section-title">What we handle</div>
+    <a href="/services/website-content-management">Content Management</a>
+    <a href="/services/web-design-and-development">Web Design &amp; Build</a>
+    <a href="/services/google-rankings-seo">SEO Setup</a>
+    <a href="/services/google-business-profile">Google Business Profile</a>
+    <a href="/services/social-media-management">Social Media</a>
+    <a href="/services/speed-and-mobile-optimization">Speed Optimization</a>
+  </div>
+  <a href="/results">Our Wins — Results</a>
+  <a href="/portfolio">Our Wins — Portfolio</a>
+  <a href="/blog/">Free Resources</a>
+  <a href="/about">About</a>
+  <div class="mobile-sub">
+    <div class="mobile-section-title">Where we work</div>
+    <a href="/locations/australia">Australia</a>
+    <a href="/locations/united-states">United States</a>
+    <a href="/locations/canada">Canada</a>
+    <a href="/locations/">All locations</a>
+  </div>
+  <a href="/contact" class="btn btn-primary" style="margin-top:24px;justify-content:center;">Get a free audit <span class="arrow">→</span></a>
+</div>
+
+
+<article>
+  <section class="article-hero reveal">
+    <div class="wrap">
+      <span class="eyebrow">Content Management</span>
+      <h1>What Is Enterprise Content Management? The Definitive 2026 Guide</h1>
+      <div class="article-meta">By Digisyn Co. &bull; Updated May 28, 2026 &bull; 16 min read</div>
+    </div>
+  </section>
+
+  <div class="article-img-wrap">
+    <div class="article-img">
+      <img decoding="async" src="https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=1400&h=600&fit=crop" alt="Enterprise content management — organised digital documents and workflow" loading="eager" width="1080" height="608">
+    </div>
+  </div>
+
+  <nav class="breadcrumb" aria-label="Breadcrumb"><div class="wrap"><a href="/">Home</a><span>›</span><a href="/blog/">Free Resources</a><span>›</span><span class="current">What Is Enterprise Content Management?</span></div></nav>
+
+  <div class="article-body">
+    <p>Most organisations don't have a content problem. They have a <em>finding</em> problem.</p>
+
+<p>The contract exists &mdash; somewhere. The signed onboarding form was filed &mdash; by someone. The latest version of the policy is the one in the email thread, or maybe the shared drive, or maybe the folder named &ldquo;Final_v3_REALLY_final.&rdquo; Multiply that small friction across thousands of employees and millions of documents, and you get the quiet tax that slows almost every large business: information chaos.</p>
+
+<p>Enterprise Content Management (ECM) is the discipline built to end that chaos. This guide explains exactly what ECM is, how it works, where it's heading in the age of AI, and how to choose a platform that actually fits your business &mdash; in plain English, without the vendor jargon.</p>
+
+<h2>What Is Enterprise Content Management?</h2>
+<p><strong>Enterprise Content Management (ECM) is the strategy, methods, and technology an organisation uses to capture, store, manage, secure, deliver, and ultimately retire its documents and unstructured information across its entire lifecycle.</strong> In short, ECM turns scattered files &mdash; contracts, invoices, emails, PDFs, scans, images, and records &mdash; into organised, secure, searchable, and governed business assets.</p>
+
+<p>If that sounds broad, it's because ECM is deliberately broad. It isn't a single product. It's an umbrella that brings together several capabilities most companies otherwise buy and run separately:</p>
+<ul style="margin:16px 0 16px 24px;display:flex;flex-direction:column;gap:10px;">
+  <li><strong>Capture</strong> &mdash; getting content into the system (scanning, uploads, email ingestion, automated data extraction)</li>
+  <li><strong>Document management</strong> &mdash; versioning, check-in/check-out, metadata, and search</li>
+  <li><strong>Workflow and business process automation</strong> &mdash; routing documents for review, approval, and action</li>
+  <li><strong>Records management</strong> &mdash; retention schedules, legal holds, and defensible disposal</li>
+  <li><strong>Collaboration</strong> &mdash; letting teams work on the same content securely</li>
+  <li><strong>Governance, security, and compliance</strong> &mdash; access control, audit trails, and encryption</li>
+</ul>
+
+<p>The term itself has an interesting history that tells you a lot about where the field is going. The industry association <a href="https://info.aiim.org/what-is-ecm" target="_blank" rel="noopener">AIIM</a> standardised the phrase &ldquo;Enterprise Content Management&rdquo; in the early 2000s. Then in 2017, <a href="https://www.cmswire.com/information-management/are-we-really-having-the-ecm-is-dead-conversation-again/" target="_blank" rel="noopener">Gartner famously declared</a> that &ldquo;ECM is now dead&rdquo; &mdash; at least as a market label &mdash; and replaced it with <strong>Content Services Platforms (CSPs)</strong>. AIIM, meanwhile, reframed the underlying practice as <strong>Intelligent Information Management (IIM)</strong>.</p>
+
+<p>So is ECM dead? Not even close. The <em>term</em> evolved, but the <em>need</em> &mdash; managing the lifecycle of unstructured information across a business &mdash; has only grown. Most buyers, analysts, and vendors still use &ldquo;ECM&rdquo; as the everyday word for it, and that's how we'll use it here, while flagging where the modern, AI-driven version (content services and IIM) takes things further.</p>
+
+<div class="snippet-box">
+  <p><strong>Quick definition for snippets and voice search:</strong> Enterprise Content Management (ECM) is a system of strategies and tools that lets an organisation capture, store, manage, secure, and deliver its documents and unstructured content throughout the content lifecycle &mdash; improving workflow, collaboration, and compliance.</p>
+</div>
+
+<h2>Why ECM Matters More in 2026 Than Ever Before</h2>
+<p>Three forces have turned ECM from a &ldquo;nice to have&rdquo; into infrastructure.</p>
+
+<h3>1. The volume of content is exploding</h3>
+<p>Most business information is <em>unstructured</em> &mdash; it doesn't live tidily in database rows. It's documents, emails, contracts, images, and media. The International Data Corporation has projected that the total amount of data created and consumed worldwide would reach roughly <a href="https://www.persistencemarketresearch.com/market-research/enterprise-content-management-market.asp" target="_blank" rel="noopener">175 zettabytes</a> by 2025, and the curve keeps climbing. No team can manage that manually.</p>
+
+<h3>2. Compliance and risk got serious</h3>
+<p>Data-protection regulations (GDPR, HIPAA, SOX, and a growing patchwork of regional privacy laws) carry real penalties. Regulators expect you to know what records you hold, where they are, who accessed them, and when they were deleted. That's a records-management and audit-trail problem &mdash; exactly what ECM solves.</p>
+
+<h3>3. Work went hybrid and digital-first</h3>
+<p>Teams are distributed across cities, time zones, and countries. The shared filing cabinet &mdash; physical <em>or</em> digital &mdash; doesn't work when half the team is remote. Secure, cloud-based access to the right document, by the right person, from anywhere, is now a baseline expectation.</p>
+
+<p>The market reflects this. Analyst estimates vary widely depending on what they count, but they agree on the direction: <a href="https://www.mordorintelligence.com/industry-reports/enterprise-content-management-market" target="_blank" rel="noopener">Mordor Intelligence</a> pegs the ECM market at around USD 44 billion in 2026, growing to roughly USD 81 billion by 2031 at a near-13% CAGR. Cloud deployment now leads the field, accounting for roughly <a href="https://www.persistencemarketresearch.com/market-research/enterprise-content-management-market.asp" target="_blank" rel="noopener">60% of the market</a>. ECM stopped being a back-office filing tool and became part of the digital transformation core.</p>
+
+<div class="callout">
+  <p><strong>Expert insight:</strong> The smartest leaders no longer treat content as a by-product of operations. They treat it as a strategic asset &mdash; something to be governed, mined for insight, and fed into automation. That mindset shift is the real point of modern ECM.</p>
+</div>
+
+<h2>The Core Components of an ECM System</h2>
+<p>A complete ECM platform brings together six capabilities. You can think of them as the lifecycle of a single document, from the moment it arrives to the day it's defensibly destroyed.</p>
+
+<h3>1. Capture</h3>
+<p>Capture is how content <em>enters</em> the system. Modern capture is far more than scanning paper:</p>
+<ul style="margin:16px 0 16px 24px;display:flex;flex-direction:column;gap:10px;">
+  <li>Scanning and OCR (optical character recognition) to turn paper and images into searchable text</li>
+  <li>Email and inbox ingestion</li>
+  <li>Direct uploads and drag-and-drop</li>
+  <li><strong>AI document processing</strong> that reads an invoice, extracts the vendor, amount, and due date, and files it automatically &mdash; no human keying required</li>
+</ul>
+
+<h3>2. Document Management</h3>
+<p>Once content is in, it needs to be findable and trustworthy. This layer handles:</p>
+<ul style="margin:16px 0 16px 24px;display:flex;flex-direction:column;gap:10px;">
+  <li><strong>Version control</strong> so everyone works on the current file, with full history</li>
+  <li><strong>Metadata and tagging</strong> so documents can be filtered and retrieved by attributes (client, date, type, status)</li>
+  <li><strong>Enterprise search</strong> that finds content by its <em>contents</em>, not just its filename</li>
+  <li>Check-in/check-out to prevent two people overwriting each other</li>
+</ul>
+
+<h3>3. Workflow &amp; Business Process Automation</h3>
+<p>This is where ECM stops being storage and starts saving money. <strong>Document workflow automation</strong> routes content automatically: a new invoice goes to the right approver; a signed contract triggers the onboarding process; an expense over a threshold escalates to a manager. Rules replace inbox chasing.</p>
+
+<h3>4. Records Management</h3>
+<p>Not all content is equal. Some documents are <em>records</em> with legal and regulatory weight. Records management applies:</p>
+<ul style="margin:16px 0 16px 24px;display:flex;flex-direction:column;gap:10px;">
+  <li>Retention schedules (how long to keep each record type)</li>
+  <li>Legal holds (freezing records during litigation or audit)</li>
+  <li>Defensible disposal (deleting what you're no longer required to keep &mdash; which reduces risk)</li>
+</ul>
+
+<h3>5. Collaboration</h3>
+<p>Modern <strong>enterprise collaboration</strong> means teams co-author, comment, and review inside the system &mdash; with permissions intact &mdash; rather than emailing attachments back and forth and losing track of the truth.</p>
+
+<h3>6. Governance, Security &amp; Compliance</h3>
+<p>The connective tissue across everything: <strong>secure document storage</strong>, granular access control, encryption, and complete audit trails showing who did what, when. This is what makes ECM defensible to regulators and auditors.</p>
+
+<h2>How Enterprise Content Management Works</h2>
+<p>The clearest way to understand ECM is to follow a single document through its life. Imagine an <strong>accounts-payable invoice</strong> arriving at a mid-sized company.</p>
+<ul style="margin:16px 0 16px 24px;display:flex;flex-direction:column;gap:10px;">
+  <li><strong>Step 1 &mdash; Capture.</strong> The invoice arrives as a PDF in a shared inbox. ECM ingests it automatically. AI reads it and extracts the supplier name, invoice number, line items, total, and due date.</li>
+  <li><strong>Step 2 &mdash; Classify &amp; store.</strong> The system recognises it as an invoice, tags it with the right metadata, and files it in the correct repository &mdash; instantly searchable.</li>
+  <li><strong>Step 3 &mdash; Workflow.</strong> A rule routes it to the relevant department head for approval. Because the amount exceeds a set threshold, it also escalates to finance. Approvers get a notification, not another email to lose.</li>
+  <li><strong>Step 4 &mdash; Action &amp; integration.</strong> Once approved, ECM passes the data to the accounting or ERP system to schedule payment &mdash; no re-keying.</li>
+  <li><strong>Step 5 &mdash; Records &amp; retention.</strong> The invoice is retained according to the company's financial-records schedule. When the retention period ends, it's flagged for defensible disposal.</li>
+  <li><strong>Step 6 &mdash; Audit trail.</strong> Every step &mdash; who approved it, when, from where &mdash; is logged automatically. If an auditor asks, the answer is one search away.</li>
+</ul>
+<p>What took days of manual handling, chasing, and filing now happens in minutes, with a complete record of every action. That's ECM working as designed &mdash; and it's the same pattern whether the document is a contract, a patient record, an insurance claim, or an HR form.</p>
+
+<h2>The Benefits of Enterprise Content Management</h2>
+<p>Here's what organisations actually get when ECM is done well.</p>
+<ul style="margin:16px 0 16px 24px;display:flex;flex-direction:column;gap:10px;">
+  <li><strong>Time saved.</strong> Employees stop hunting for documents. Estimates of how much knowledge-worker time is lost to searching and recreating information run high across studies &mdash; ECM reclaims a meaningful slice of it.</li>
+  <li><strong>Lower costs.</strong> Less paper, less storage, fewer manual handoffs, fewer lost documents to recreate.</li>
+  <li><strong>Fewer errors.</strong> Automated capture and routing remove the typos and missed steps that come with manual processing.</li>
+  <li><strong>Stronger compliance.</strong> Retention schedules, audit trails, and access controls make regulatory requirements provable rather than hopeful.</li>
+  <li><strong>Better security.</strong> Centralised, encrypted, permission-controlled storage beats files scattered across drives, inboxes, and desktops.</li>
+  <li><strong>Faster decisions.</strong> When information is instantly findable, decisions don't wait on someone digging through a folder.</li>
+  <li><strong>Business continuity.</strong> Cloud-based ECM means a fire, a flood, or a lost laptop doesn't take your records with it.</li>
+  <li><strong>Scalability.</strong> A good platform handles ten users or ten thousand without the system breaking down.</li>
+</ul>
+
+<div class="callout">
+  <p><strong>Actionable tip:</strong> Don't try to justify ECM with abstract &ldquo;efficiency.&rdquo; Pick one painful, document-heavy process &mdash; invoice approval, client onboarding, contract management &mdash; and measure its current cost in hours and errors. That single process is your business case.</p>
+</div>
+
+<h2>The Hidden Costs of Operating Without ECM</h2>
+<p>If you don't feel the pain of <em>not</em> having ECM, it's usually because the costs are spread thin and invisible. Here's what they look like:</p>
+<ul style="margin:16px 0 16px 24px;display:flex;flex-direction:column;gap:10px;">
+  <li><strong>The search tax.</strong> Staff spend hours each week locating documents that should take seconds to find.</li>
+  <li><strong>Version confusion.</strong> Decisions get made on outdated drafts. Two people edit two copies. Nobody's sure which is the truth.</li>
+  <li><strong>Compliance exposure.</strong> When you can't prove who accessed a record or when it was deleted, an audit becomes a scramble &mdash; and a fine becomes possible.</li>
+  <li><strong>Security gaps.</strong> Sensitive files sit on personal drives and in email attachments with no access control.</li>
+  <li><strong>Knowledge loss.</strong> When an employee leaves, the documents and context in their personal folders often walk out the door with them.</li>
+  <li><strong>Process drag.</strong> Approvals stall in inboxes. Onboarding takes weeks. Customers wait.</li>
+  <li><strong>Duplication.</strong> The same document is recreated, re-scanned, and re-stored across departments because no one can find the original.</li>
+</ul>
+<p>None of these is catastrophic on its own. Together, over a year or two, they quietly drain productivity, inflate risk, and cap how fast the business can grow.</p>
+
+<h2>ECM vs Document Management Systems (DMS)</h2>
+<p>This is the most common point of confusion. A document management system is <em>part of</em> ECM &mdash; not a synonym for it. A DMS focuses on storing, organising, and retrieving documents. ECM does that <strong>and</strong> adds workflow automation, records management, governance, collaboration, and capture across the whole enterprise.</p>
+<div class="ecm-table-wrap">
+<table class="ecm-table">
+  <thead><tr><th>Capability</th><th>Document Management System (DMS)</th><th>Enterprise Content Management (ECM)</th></tr></thead>
+  <tbody>
+    <tr><td>Primary purpose</td><td>Store, organise &amp; retrieve documents</td><td>Manage the full content lifecycle across the business</td></tr>
+    <tr><td>Scope</td><td>Documents</td><td>Documents, emails, images, records, web content, media</td></tr>
+    <tr><td>Workflow automation</td><td>Limited or basic</td><td>Core feature</td></tr>
+    <tr><td>Records &amp; retention</td><td>Rarely</td><td>Built-in</td></tr>
+    <tr><td>Compliance &amp; audit trails</td><td>Basic</td><td>Comprehensive</td></tr>
+    <tr><td>Capture (OCR, AI extraction)</td><td>Often add-on</td><td>Native</td></tr>
+    <tr><td>Best for</td><td>A team that needs orderly file storage</td><td>An organisation automating document-driven processes at scale</td></tr>
+  </tbody>
+</table>
+</div>
+<p><strong>The simple rule:</strong> if you mainly need a tidy, searchable filing system, a DMS may be enough. If you need to <em>automate processes</em>, <em>prove compliance</em>, and <em>govern content across departments</em>, you need ECM.</p>
+
+<h2>ECM vs CMS (Content Management System)</h2>
+<p>These two get mixed up constantly because the names are nearly identical &mdash; but they solve opposite problems. A <strong>CMS</strong> (like WordPress) manages <strong>public-facing web content</strong>: your website pages, blog, and digital marketing assets. An <strong>ECM</strong> manages <strong>internal business content</strong>: the documents, records, and information that run your operations.</p>
+<div class="ecm-table-wrap">
+<table class="ecm-table">
+  <thead><tr><th></th><th>CMS (Content Management System)</th><th>ECM (Enterprise Content Management)</th></tr></thead>
+  <tbody>
+    <tr><td>Manages</td><td>Website &amp; public digital content</td><td>Internal documents &amp; business records</td></tr>
+    <tr><td>Audience</td><td>Website visitors, customers</td><td>Employees, departments, auditors</td></tr>
+    <tr><td>Typical content</td><td>Web pages, blog posts, images, media</td><td>Contracts, invoices, HR files, records</td></tr>
+    <tr><td>Core jobs</td><td>Publishing, design, SEO</td><td>Capture, workflow, compliance, governance</td></tr>
+    <tr><td>Example</td><td>WordPress, Webflow, Drupal</td><td>OpenText, M-Files, Microsoft 365, Hyland</td></tr>
+  </tbody>
+</table>
+</div>
+<p>One faces <em>outward</em> to your audience; the other faces <em>inward</em> to your operations. Many organisations need both. (If your question is really about the public-website side, our guide on <a href="/blog/content-management-service-vs-cms">content management vs a CMS</a> breaks that down.)</p>
+
+<h2>AI and the Future of ECM</h2>
+<p>This is where ECM in 2026 looks nothing like ECM in 2016. Artificial intelligence has moved from a buzzword bolted onto the marketing page to the engine doing the work. Roughly <a href="https://www.businessresearchinsights.com/market-reports/enterprise-content-management-ecm-software-market-122689" target="_blank" rel="noopener">44% of new ECM deployments in 2024</a> incorporated AI and machine learning &mdash; and that share is climbing fast.</p>
+<p>Here's what AI is actually changing:</p>
+<ul style="margin:16px 0 16px 24px;display:flex;flex-direction:column;gap:10px;">
+  <li><strong>Intelligent capture.</strong> AI reads, understands, and extracts data from documents without templates &mdash; invoices, contracts, forms &mdash; and files them automatically.</li>
+  <li><strong>Auto-classification.</strong> Instead of staff tagging documents by hand, models classify and route them based on content.</li>
+  <li><strong>Semantic and conversational search.</strong> You no longer need the exact filename. You ask, in plain language, &ldquo;show me all expiring vendor contracts in Q3,&rdquo; and the system understands intent.</li>
+  <li><strong>Summarisation and insight.</strong> AI summarises long contracts, surfaces obligations and key dates, and answers questions <em>about</em> your content &mdash; turning passive storage into an active knowledge base.</li>
+  <li><strong>Compliance automation.</strong> AI flags sensitive data (PII), recommends retention rules, and detects anomalies that hint at risk.</li>
+</ul>
+<p>This is the realisation of what Gartner called <strong>Content Services Platforms</strong> and AIIM calls <strong>Intelligent Information Management</strong>: modular, cloud-native, AI-driven systems that focus less on <em>where</em> content is stored and more on <em>how</em> it's used, connected, and acted upon. The future ECM isn't a vault you put documents in &mdash; it's an intelligent layer that reads your content and helps you act on it.</p>
+<p>If you're thinking about how AI changes the way content gets <em>found</em> &mdash; both inside your business and across the web &mdash; our piece on <a href="/blog/aeo-answer-engine-optimization">answer engine optimisation</a> covers the public-facing side of the same shift.</p>
+
+<h2>Industries That Benefit Most From ECM</h2>
+<p>ECM delivers value anywhere documents drive the business &mdash; but a few sectors live and die by it.</p>
+<ul style="margin:16px 0 16px 24px;display:flex;flex-direction:column;gap:10px;">
+  <li><strong>Financial services &amp; banking.</strong> Loan files, KYC documents, audit trails, and strict retention rules. ECM is effectively mandatory.</li>
+  <li><strong>Healthcare.</strong> Patient records, consent forms, and HIPAA-grade privacy and access control.</li>
+  <li><strong>Insurance.</strong> Claims processing is a document workflow at its core &mdash; capture, route, approve, archive.</li>
+  <li><strong>Government &amp; public sector.</strong> Records management, freedom-of-information requests, and defensible retention.</li>
+  <li><strong>Legal.</strong> Matter files, contracts, version control, and legal holds.</li>
+  <li><strong>Manufacturing &amp; construction.</strong> Specs, compliance certificates, safety documentation, and project files across sites.</li>
+  <li><strong>Education.</strong> Student records, admissions, and accreditation documentation.</li>
+</ul>
+<p>Notice the common thread: these are industries where <strong>compliance management</strong> is non-negotiable and where a lost or mishandled document carries real consequences.</p>
+
+<h2>Real-World ECM Use Cases</h2>
+<p>Beyond the industry labels, here are the concrete workflows ECM transforms &mdash; the ones leaders recognise immediately.</p>
+<ul style="margin:16px 0 16px 24px;display:flex;flex-direction:column;gap:10px;">
+  <li><strong>Accounts payable automation.</strong> Invoices captured, matched, routed, approved, and paid with minimal human touch.</li>
+  <li><strong>Employee onboarding.</strong> New-hire paperwork captured, signed, routed to HR, IT, and payroll, and retained &mdash; all triggered automatically.</li>
+  <li><strong>Contract lifecycle management.</strong> Contracts stored centrally, with alerts on renewal and expiry dates so nothing lapses silently.</li>
+  <li><strong>Customer onboarding (KYC).</strong> Identity documents captured, verified, and filed against compliance rules.</li>
+  <li><strong>Claims processing.</strong> Insurance or warranty claims moving through capture, assessment, approval, and archive.</li>
+  <li><strong>Audit readiness.</strong> Pulling every record and access log an auditor requests in minutes, not days of frantic searching.</li>
+</ul>
+<div class="callout">
+  <p><strong>Example workflow &mdash; contract renewals:</strong> A SaaS company stores all client contracts in its ECM. Ninety days before each renewal, the system automatically alerts the account manager, attaches the contract and renewal terms, and opens a task. Result: renewals stopped slipping through the cracks, and recovered revenue paid for the platform within a year.</p>
+</div>
+
+<h2>Features to Look For in an ECM Solution</h2>
+<p>Vendors all claim the same words. Here's the checklist that actually separates them &mdash; use it when you evaluate.</p>
+<ul style="margin:16px 0 16px 24px;display:flex;flex-direction:column;gap:10px;">
+  <li><strong>Cloud-native (and ideally cloud or hybrid options).</strong> Cloud content management is now the default for security, scalability, and remote access.</li>
+  <li><strong>Genuine AI capabilities.</strong> Ask for a live demo of intelligent capture and semantic search on <em>your</em> document types &mdash; not a slide.</li>
+  <li><strong>Powerful enterprise search.</strong> Searching by content, metadata, and natural language, fast, at scale.</li>
+  <li><strong>No-code/low-code workflow builder.</strong> So your business users &mdash; not just IT &mdash; can automate processes.</li>
+  <li><strong>Strong integrations.</strong> It must connect to the tools you already run: Microsoft 365, your ERP, CRM, and e-signature.</li>
+  <li><strong>Robust security &amp; compliance.</strong> Encryption, granular permissions, full audit trails, and the certifications your industry requires.</li>
+  <li><strong>Records management built in.</strong> Retention schedules, legal holds, defensible disposal.</li>
+  <li><strong>Scalability.</strong> Proven to handle your volume of users and documents &mdash; and your growth.</li>
+  <li><strong>Usability.</strong> If staff find it clunky, they'll route around it, and adoption is where most ECM projects quietly fail.</li>
+  <li><strong>Transparent pricing &amp; support.</strong> Including migration help and real onboarding, not just a login.</li>
+</ul>
+<div class="callout">
+  <p><strong>Actionable tip:</strong> Weight <em>usability</em> and <em>adoption support</em> heavily. The most powerful ECM platform in the world delivers nothing if your team won't use it. Studies consistently find poor user adoption &mdash; driven by clunky interfaces &mdash; among the top reasons ECM rollouts underperform.</p>
+</div>
+
+<h2>How to Choose the Best ECM Platform for Your Business</h2>
+<p>A platform is a multi-year commitment. Run this process rather than reacting to the slickest demo.</p>
+<ul style="margin:16px 0 16px 24px;display:flex;flex-direction:column;gap:10px;">
+  <li><strong>1. Map your pain first, not the features.</strong> List your most painful, document-heavy processes. Your requirements come from <em>those</em>, not from a vendor's feature list.</li>
+  <li><strong>2. Involve the people who'll use it.</strong> IT, compliance, <em>and</em> the frontline staff who handle documents daily. Buying without frontline input is the fastest route to a system nobody adopts.</li>
+  <li><strong>3. Decide cloud, on-premise, or hybrid.</strong> For most organisations in 2026, cloud or hybrid wins on cost, security, and remote access &mdash; but regulated industries sometimes have constraints. Decide deliberately.</li>
+  <li><strong>4. Shortlist by fit, not brand.</strong> The big names &mdash; OpenText, IBM, Microsoft, Oracle, Hyland, M-Files, Box, DocuWare &mdash; are the <a href="https://www.persistencemarketresearch.com/market-research/enterprise-content-management-market.asp" target="_blank" rel="noopener">recognised market leaders</a>, but &ldquo;leader&rdquo; doesn't mean &ldquo;right for you.&rdquo; A platform built for 50,000-seat global banks can be overkill for a 300-person firm.</li>
+  <li><strong>5. Demo with your own documents.</strong> Generic demos always look great. Test capture, search, and a real workflow using <em>your</em> invoices, contracts, and forms.</li>
+  <li><strong>6. Score total cost of ownership.</strong> Licences, implementation, migration, training, integration, and ongoing support &mdash; not just the sticker price.</li>
+  <li><strong>7. Plan the rollout and adoption.</strong> The best implementations start with one or two high-impact processes, prove the value, then expand. A &ldquo;boil the ocean&rdquo; rollout is the classic failure mode.</li>
+</ul>
+<p>For the deeper version of this evaluation thinking &mdash; applied to content and digital partners generally &mdash; see our guide on <a href="/blog/choosing-right-content-management-partner">choosing the right content management partner</a>.</p>
+
+<h2>Where Digisyn Fits In</h2>
+<p>Let's be straight about who we are, because it matters for trust: <strong>Digisyn isn't an enterprise ECM software vendor.</strong> We don't sell you OpenText or Hyland. We're a content and digital studio that helps founder-led and growing businesses get their content house in order &mdash; websites, content strategy, SEO, and the day-to-day management that keeps it all current.</p>
+<p>So why are we writing the definitive guide to ECM? Because the <em>principles</em> behind enterprise content management &mdash; capture it properly, organise it, govern it, keep it current, and retire what's stale &mdash; scale all the way down. Most growing businesses don't need a seven-figure ECM platform. They need someone to apply the same discipline at a sensible scale: a clear <a href="/blog/what-is-content-lifecycle-management">content lifecycle</a>, an organised system, and someone who actually maintains it instead of building it and walking away.</p>
+<p>That's the gap we fill. If you're a smaller or mid-sized business wrestling with messy content and wondering whether you need &ldquo;an ECM&rdquo; &mdash; or just a better <a href="/services/website-content-management">content management</a> system and a partner to run it &mdash; that's exactly the conversation we're built for. And if you genuinely need an enterprise platform, this guide should help you choose one well.</p>
+<p>We'll tell you honestly which of those two you are. No call required.</p>
+
+<h2>Frequently Asked Questions</h2>
+<div class="faq-list">
+  <div class="faq-item">
+    <button class="faq-q" type="button">What is Enterprise Content Management in simple terms?</button>
+    <div class="faq-a"><p>Enterprise Content Management (ECM) is a system of strategies and tools that helps an organisation capture, store, organise, secure, and manage all its documents and unstructured information in one place &mdash; so the right people can find and use the right content, while staying compliant and secure.</p></div>
+  </div>
+  <div class="faq-item">
+    <button class="faq-q" type="button">What is the difference between ECM and a document management system (DMS)?</button>
+    <div class="faq-a"><p>A document management system focuses on storing, organising, and retrieving documents. ECM includes document management but goes further &mdash; adding workflow automation, records management, content capture, collaboration, and enterprise-wide governance and compliance. A DMS is essentially one component of a full ECM.</p></div>
+  </div>
+  <div class="faq-item">
+    <button class="faq-q" type="button">Is ECM the same as a CMS?</button>
+    <div class="faq-a"><p>No. A CMS (content management system) manages public-facing web content like your website and blog. An ECM (enterprise content management) manages internal business documents and records such as contracts, invoices, and HR files. They solve opposite problems, and many organisations use both.</p></div>
+  </div>
+  <div class="faq-item">
+    <button class="faq-q" type="button">Is ECM still relevant, or has it been replaced by &ldquo;content services&rdquo;?</button>
+    <div class="faq-a"><p>ECM is very much relevant. In 2016&ndash;2017 Gartner retired &ldquo;ECM&rdquo; as a market term in favour of &ldquo;Content Services Platforms,&rdquo; and AIIM reframed the practice as &ldquo;Intelligent Information Management.&rdquo; The label evolved to reflect modular, cloud-based, AI-driven tools &mdash; but the underlying need to manage content across its lifecycle is bigger than ever, and most people still call it ECM.</p></div>
+  </div>
+  <div class="faq-item">
+    <button class="faq-q" type="button">How does AI improve enterprise content management?</button>
+    <div class="faq-a"><p>AI automates the manual parts of ECM: it reads and extracts data from documents (intelligent capture), classifies and routes content automatically, enables natural-language and semantic search, summarises long documents, and flags compliance risks. Roughly 44% of new ECM deployments in 2024 included AI or machine learning, and that share is rising.</p></div>
+  </div>
+  <div class="faq-item">
+    <button class="faq-q" type="button">What does an ECM system cost?</button>
+    <div class="faq-a"><p>It varies enormously &mdash; from per-user monthly subscriptions for cloud platforms to large enterprise licences with implementation costs. The bigger number to plan for is total cost of ownership: licensing, migration, integration, training, and ongoing support. Match the platform to your actual scale; an enterprise-grade system can be overkill for a smaller business.</p></div>
+  </div>
+  <div class="faq-item">
+    <button class="faq-q" type="button">Which industries benefit most from ECM?</button>
+    <div class="faq-a"><p>Industries with high document volumes and strict compliance needs benefit most &mdash; financial services, healthcare, insurance, legal, government, manufacturing, and education. Any business where documents drive core processes (approvals, onboarding, claims, contracts) gains from ECM.</p></div>
+  </div>
+  <div class="faq-item">
+    <button class="faq-q" type="button">Do small businesses need enterprise content management?</button>
+    <div class="faq-a"><p>Most small businesses don't need a full enterprise ECM platform, but they absolutely benefit from the principles &mdash; a clear content lifecycle, organised and secure storage, and consistent maintenance. The right scale of solution (and a partner to run it) usually matters more than the brand name on the software.</p></div>
+  </div>
+</div>
+
+<h2>The Bottom Line</h2>
+<p>Enterprise Content Management is no longer about filing cabinets or even digital folders. It's about turning the flood of documents and unstructured information every business generates into an organised, secure, automated, and increasingly <em>intelligent</em> asset &mdash; one that speeds up work, reduces risk, and proves compliance on demand.</p>
+<p>The technology has matured, the AI is real, and the cost of doing nothing &mdash; the search tax, the version chaos, the compliance exposure &mdash; keeps rising quietly in the background.</p>
+<p>You don't have to solve all of it at once. Start with one painful, document-heavy process. Measure what it costs you today. Then decide whether you need an enterprise platform, a smarter system at your scale, or simply a partner to bring order to your content.</p>
+
+    <div class="article-cta">
+      <h3>Not sure where you land?</h3>
+      <p>Send us your situation and we'll send back a real, written assessment — no sales call, no obligation — telling you honestly whether you need an enterprise ECM, a simpler system, or a content partner to run it for you.</p>
+      <a href="/contact" class="btn btn-primary">Request your free audit <span class="arrow">→</span></a>
+    </div>
+  </div>
+</article>
+
+
+<section class="cta-section">
+  <div class="wrap">
+    <div class="cta-card reveal">
+      <span class="eyebrow">Get started</span>
+      <h2>Hand it over. Get back to <em>the business.</em></h2>
+      <p>Send us your URL and we'll send back a real audit — written, not auto-generated — within three working days. No call required, no spam, no obligation.</p>
+      <div class="cta-actions">
+        <a href="/contact" class="btn btn-primary btn-lg">Request your free audit <span class="arrow">→</span></a>
+        <a href="/results" class="btn btn-ghost btn-lg">Or read a case first</a>
+      </div>
+      <div class="cta-note">Average response time: under 24 hours</div>
+    </div>
+  </div>
+</section>
+
+
+<div class="sticky-cta">
+  <a href="/contact" class="btn btn-primary">Request a free audit <span class="arrow">→</span></a>
+</div>
+
+<div class="popup-overlay" aria-hidden="true">
+  <div class="popup">
+    <button class="popup-close" aria-label="Close">&times;</button>
+    <span class="eyebrow">A small favour</span>
+    <h3>A short audit, sent on Monday.</h3>
+    <p>Drop your email and we'll send our one-page mini-audit checklist — the same one we use on the first call. No drip sequence. No webinar.</p>
+    <form class="popup-form" action="https://formspree.io/f/xqeweyqv" method="POST">
+      <div class="form-row">
+        <input type="email" name="email" placeholder="your@email" required aria-label="Email address">
+        <button type="submit" class="btn btn-primary">Send it <span class="arrow">→</span></button>
+      </div>
+    </form>
+    <p class="popup-note">We don't share, sell, or chase. Unsubscribe in one click.</p>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="/" class="nav-logo"><span class="logo-mark" aria-hidden="true"></span>Digisyn<span>|</span>Co.</a>
+        <p>A small studio that manages websites, content, and online presence for founder-led businesses in Australia, the United States, and Canada. We don't build and leave.</p>
+      </div>
+      <div>
+        <h4>Practice</h4>
+        <a href="/services/website-content-management">Content Management</a>
+        <a href="/services/web-design-and-development">Web Design &amp; Build</a>
+        <a href="/services/google-rankings-seo">SEO Setup</a>
+        <a href="/services/google-business-profile">Google Business Profile</a>
+        <a href="/services/social-media-management">Social Media</a>
+        <a href="/services/speed-and-mobile-optimization">Speed Optimization</a>
+      </div>
+      <div>
+        <h4>Where we work</h4>
+        <a href="/locations/australia">Australia</a>
+        <a href="/locations/united-states">United States</a>
+        <a href="/locations/canada">Canada</a>
+        <a href="/locations/">All locations</a>
+      </div>
+      <div>
+        <h4>The Studio</h4>
+        <a href="/about">About</a>
+        <a href="/portfolio">Portfolio</a>
+        <a href="/results">Results</a>
+        <a href="/blog/">Free Resources</a>
+        <a href="/contact">Contact</a>
+        <a href="/privacy">Privacy</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 Digisyn Co. · All rights reserved.</div>
+      <div class="colophon">Set in <em>Poppins</em> &amp; Inter · Made on three continents.</div>
+    </div>
+  </div>
+</footer>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "What Is Enterprise Content Management? The Definitive 2026 Guide",
+      "description": "A plain-English 2026 guide to Enterprise Content Management (ECM): what it is, how it works, core components, benefits, the role of AI, ECM vs DMS vs CMS, and how to choose the right platform.",
+      "image": "https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=1400&h=600&fit=crop",
+      "author": { "@type": "Organization", "name": "Digisyn Co.", "url": "https://digisyn.co" },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Digisyn Co.",
+        "logo": { "@type": "ImageObject", "url": "https://digisyn.co/images/favicon.png" }
+      },
+      "datePublished": "2026-05-28",
+      "dateModified": "2026-05-28",
+      "mainEntityOfPage": { "@type": "WebPage", "@id": "https://digisyn.co/blog/what-is-enterprise-content-management" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://digisyn.co/" },
+        { "@type": "ListItem", "position": 2, "name": "Free Resources", "item": "https://digisyn.co/blog/" },
+        { "@type": "ListItem", "position": 3, "name": "What Is Enterprise Content Management?", "item": "https://digisyn.co/blog/what-is-enterprise-content-management" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is Enterprise Content Management in simple terms?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Enterprise Content Management (ECM) is a system of strategies and tools that helps an organisation capture, store, organise, secure, and manage all its documents and unstructured information in one place, so the right people can find and use the right content while staying compliant and secure." }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the difference between ECM and a document management system (DMS)?",
+          "acceptedAnswer": { "@type": "Answer", "text": "A document management system focuses on storing, organising, and retrieving documents. ECM includes document management but goes further, adding workflow automation, records management, content capture, collaboration, and enterprise-wide governance and compliance. A DMS is essentially one component of a full ECM." }
+        },
+        {
+          "@type": "Question",
+          "name": "Is ECM the same as a CMS?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No. A CMS (content management system) manages public-facing web content like your website and blog. An ECM (enterprise content management) manages internal business documents and records such as contracts, invoices, and HR files. They solve opposite problems, and many organisations use both." }
+        },
+        {
+          "@type": "Question",
+          "name": "Is ECM still relevant, or has it been replaced by content services?",
+          "acceptedAnswer": { "@type": "Answer", "text": "ECM is very much relevant. In 2016 to 2017 Gartner retired ECM as a market term in favour of Content Services Platforms, and AIIM reframed the practice as Intelligent Information Management. The label evolved to reflect modular, cloud-based, AI-driven tools, but the underlying need to manage content across its lifecycle is bigger than ever, and most people still call it ECM." }
+        },
+        {
+          "@type": "Question",
+          "name": "How does AI improve enterprise content management?",
+          "acceptedAnswer": { "@type": "Answer", "text": "AI automates the manual parts of ECM: it reads and extracts data from documents (intelligent capture), classifies and routes content automatically, enables natural-language and semantic search, summarises long documents, and flags compliance risks. Roughly 44 percent of new ECM deployments in 2024 included AI or machine learning, and that share is rising." }
+        },
+        {
+          "@type": "Question",
+          "name": "What does an ECM system cost?",
+          "acceptedAnswer": { "@type": "Answer", "text": "It varies enormously, from per-user monthly subscriptions for cloud platforms to large enterprise licences with implementation costs. The bigger number to plan for is total cost of ownership: licensing, migration, integration, training, and ongoing support. Match the platform to your actual scale, because an enterprise-grade system can be overkill for a smaller business." }
+        },
+        {
+          "@type": "Question",
+          "name": "Which industries benefit most from ECM?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Industries with high document volumes and strict compliance needs benefit most, including financial services, healthcare, insurance, legal, government, manufacturing, and education. Any business where documents drive core processes such as approvals, onboarding, claims, and contracts gains from ECM." }
+        },
+        {
+          "@type": "Question",
+          "name": "Do small businesses need enterprise content management?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Most small businesses don't need a full enterprise ECM platform, but they benefit from the principles: a clear content lifecycle, organised and secure storage, and consistent maintenance. The right scale of solution, and a partner to run it, usually matters more than the brand name on the software." }
+        }
+      ]
+    }
+  ]
+}
+</script>
+
+<script>
+// Mobile menu toggle
+(function() {
+  var toggle = document.querySelector('.nav-toggle');
+  var menu = document.getElementById('mobileMenu');
+  if (toggle && menu) {
+    toggle.addEventListener('click', function() {
+      var open = menu.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', open);
+      document.body.style.overflow = open ? 'hidden' : '';
+    });
+    menu.querySelectorAll('a').forEach(function(a) {
+      a.addEventListener('click', function() {
+        menu.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+      });
+    });
+  }
+})();
+
+// FAQ accordion (if present)
+document.querySelectorAll('.faq-item .faq-q').forEach(function(btn) {
+  btn.addEventListener('click', function() {
+    var item = btn.parentElement;
+    var wasOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(function(i) { i.classList.remove('open'); });
+    if (!wasOpen) item.classList.add('open');
+  });
+});
+
+// Scroll reveal (robust, fail-safe)
+(function() {
+  var els = document.querySelectorAll('.reveal, .reveal-stagger');
+  document.documentElement.classList.add('js-reveal-ready');
+  function showAll() { els.forEach(function(el){ el.classList.add('is-visible'); }); }
+  if (!('IntersectionObserver' in window)) { showAll(); return; }
+  var io = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        io.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0, rootMargin: '0px 0px -8% 0px' });
+  els.forEach(function(el){ io.observe(el); });
+  requestAnimationFrame(function() {
+    els.forEach(function(el) {
+      var r = el.getBoundingClientRect();
+      if (r.top < (window.innerHeight || document.documentElement.clientHeight)) {
+        el.classList.add('is-visible');
+      }
+    });
+  });
+  setTimeout(showAll, 2000);
+})();
+
+// Lead-capture popup — show once after 25s on session
+(function() {
+  if (sessionStorage.getItem('popupShown')) return;
+  var overlay = document.querySelector('.popup-overlay');
+  var close = document.querySelector('.popup-close');
+  if (!overlay) return;
+  setTimeout(function() {
+    overlay.classList.add('open');
+    sessionStorage.setItem('popupShown', '1');
+  }, 25000);
+  if (close) close.addEventListener('click', function() { overlay.classList.remove('open'); });
+  overlay.addEventListener('click', function(e) { if (e.target === overlay) overlay.classList.remove('open'); });
+})();
+</script>
+</body>
+</html>
