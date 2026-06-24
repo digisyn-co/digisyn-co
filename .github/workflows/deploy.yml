@@ -9,24 +9,15 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Pull latest via cPanel API
-        run: |
-          # Step 1 - pull from GitHub into cPanel repo
-          curl -s -k -X POST \
-            "https://digisyn.co:2083/execute/VersionControl/retrieve" \
-            -u "${{ secrets.CPANEL_USERNAME }}:${{ secrets.CPANEL_PASSWORD }}" \
-            -d "repository_root=/home/digisync/public_html"
-          sleep 5
-
-          # Step 2 - trigger deployment task
-          curl -s -k -X POST \
-            "https://digisyn.co:2083/execute/VersionControlDeployment/create" \
-            -u "${{ secrets.CPANEL_USERNAME }}:${{ secrets.CPANEL_PASSWORD }}" \
-            -d "repository_root=/home/digisync/public_html"
-          sleep 5
-
-          # Step 3 - call deploy.php as backup to hard reset
-          curl -s -k --max-time 30 \
-            "https://digisyn.co/deploy.php?secret=digisyn2026" || true
-
-          echo "Deploy triggered successfully"
+      - name: Deploy via SSH
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: digisyn.co
+          username: digisync
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          port: 7331
+          script: |
+            cd /home/digisync/public_html
+            git fetch origin --prune
+            git reset --hard origin/main
+            git clean -fd
