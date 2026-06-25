@@ -9,19 +9,18 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Deploy via cPanel API
-        env:
-          CPANEL_USER: ${{ secrets.CPANEL_USERNAME }}
-          CPANEL_PASS: ${{ secrets.CPANEL_PASSWORD }}
+      - name: Set up SSH key
         run: |
-          curl -s -k -X POST \
-            "https://server220.orangehost.com:2083/execute/VersionControl/retrieve" \
-            -u "${CPANEL_USER}:${CPANEL_PASS}" \
-            -d "repository_root=/home/digisync/public_html"
+          mkdir -p ~/.ssh
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/deploy_key
+          chmod 600 ~/.ssh/deploy_key
+          ssh-keyscan -p 22 server220.orangehost.com >> ~/.ssh/known_hosts 2>/dev/null
 
-          sleep 8
-
-          curl -s -k -X POST \
-            "https://server220.orangehost.com:2083/execute/VersionControlDeployment/create" \
-            -u "${CPANEL_USER}:${CPANEL_PASS}" \
-            -d "repository_root=/home/digisync/public_html"
+      - name: Force-sync live folder to latest commit
+        run: |
+          ssh -i ~/.ssh/deploy_key -p 22 digisync@server220.orangehost.com '
+            cd /home/digisync/public_html &&
+            git fetch origin --prune &&
+            git reset --hard origin/main &&
+            git clean -fd
+          '
