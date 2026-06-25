@@ -14,11 +14,13 @@ jobs:
           mkdir -p ~/.ssh
           echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/deploy_key
           chmod 600 ~/.ssh/deploy_key
-          ssh-keyscan -p 22 server220.orangehost.com >> ~/.ssh/known_hosts 2>/dev/null
+          echo "Host server220.orangehost.com
+            StrictHostKeyChecking no
+            UserKnownHostsFile /dev/null" > ~/.ssh/config
 
       - name: Force-sync live folder to latest commit
         run: |
-          ssh -i ~/.ssh/deploy_key -p 22 digisync@server220.orangehost.com '
+          ssh -i ~/.ssh/deploy_key digisync@server220.orangehost.com '
             cd /home/digisync/public_html &&
             git fetch origin --prune &&
             git reset --hard origin/main &&
