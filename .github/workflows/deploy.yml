@@ -24,6 +24,11 @@ jobs:
             **/.git*
             **/.git*/**
             .github/**
+            **/*.sh
+            deploy.php
+            .cpanel.yml
+            README.md
+            .gitignore
 
       - name: Purge Cloudflare cache
         env:
