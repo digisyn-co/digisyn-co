@@ -246,21 +246,19 @@
     }
   }
 
-  // ---- SEND LEAD TO FORMSPREE (fires & forgets — doesn't block audit) ----
-  // Formspree forwards submissions to johnmichaellamigo@gmail.com
-  // To activate: replace FORMSPREE_ID below with your actual ID from formspree.io/new
-  const FORMSPREE_ENDPOINT = 'https://formspree.io/f/xqeweyqv';
+  // ---- SEND LEAD TO WEB3FORMS (fires & forgets — doesn't block audit) ----
+  // Web3Forms forwards submissions to the email on the access key's account.
+  const WEB3FORMS_ENDPOINT = 'https://api.web3forms.com/submit';
 
   function sendLead(email, url) {
-    fetch(FORMSPREE_ENDPOINT, {
+    fetch(WEB3FORMS_ENDPOINT, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
       body: JSON.stringify({
+        access_key: '5f4bf4f3-1623-4f98-a746-8fe5a071b7d0',
         email: email,
         website: url,
-        _subject: '\uD83D\uDD0D New Free Audit Request — ' + url,
-        _replyto: email,
-        _to: 'johnmichaellamigo@gmail.com',
+        subject: '\uD83D\uDD0D New Free Audit Request — ' + url,
         message: 'A new visitor just ran a free website audit on digisyn.co.\n\n---\nEmail:   ' + email + '\nWebsite: ' + url + '\nTime:    ' + new Date().toLocaleString() + '\nSource:  digisyn.co/#free-audit\n---\n\nReply directly to this email to follow up with the lead.'
       })
     }).catch(() => {}); // Silent fail — never block the audit UI
@@ -282,7 +280,7 @@
           return;
         }
 
-        // Fire lead to Formspree (non-blocking — runs in background)
+        // Fire lead to Web3Forms (non-blocking — runs in background)
         if (emailInput && emailInput.value.trim()) {
           sendLead(emailInput.value.trim(), urlInput.value.trim());
         }
