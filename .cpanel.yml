@@ -1,6 +1,0 @@
----
-deployment:
-  tasks:
-    - /usr/bin/git -C /home/digisync/public_html fetch origin
-    - /usr/bin/git -C /home/digisync/public_html checkout main
-    - /usr/bin/git -C /home/digisync/public_html pull origin main
