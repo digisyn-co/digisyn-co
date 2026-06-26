@@ -94,11 +94,11 @@
         const email = emailInput ? emailInput.value.trim() : '';
 
         if (email) {
-          // Submit to Formspree
-          fetch('https://formspree.io/f/xqeweyqv', {
+          // Submit to Web3Forms
+          fetch('https://api.web3forms.com/submit', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-            body: JSON.stringify({ email: email, _subject: 'New Popup Lead - Digisyn Co.' })
+            body: JSON.stringify({ access_key: '5f4bf4f3-1623-4f98-a746-8fe5a071b7d0', email: email, subject: 'New Popup Lead - Digisyn Co.' })
           }).catch(function() {});
 
           // Show success state
