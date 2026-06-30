@@ -16,9 +16,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" as="image" href="/images/hero-business-owner.webp" fetchpriority="high">
-<link rel="preload" as="style" href="/css/styles-modern.css?v=20260528">
+<link rel="preload" as="style" href="/css/styles-modern.css?v=20260701">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/css/styles-modern.css?v=20260630">
+<link rel="stylesheet" href="/css/styles-modern.css?v=20260701">
 <noscript><style>.reveal,.reveal-stagger>*{opacity:1!important;transform:none!important;}.mobile-menu{display:none!important;}</style></noscript>
 <script>
 var s=document.createElement('script');s.async=true;
@@ -698,6 +698,19 @@ document.getElementsByTagName('head')[0].appendChild(s);
   if (!nav) return;
   var onScroll = function() { nav.classList.toggle('scrolled', window.scrollY > 10); };
   window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+})();
+
+// Sticky mobile CTA — reveal only after scrolling past the hero
+(function() {
+  var cta = document.querySelector('.sticky-cta');
+  if (!cta) return;
+  var onScroll = function() {
+    var trigger = Math.max(420, window.innerHeight * 0.6);
+    cta.classList.toggle('show', window.scrollY > trigger);
+  };
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', onScroll, { passive: true });
   onScroll();
 })();
 

@@ -194,3 +194,8 @@
   .hero-ring-2{width:120px;height:120px;bottom:36px;right:-12px;opacity:.45}
   .hero-ring-3{display:none}
 }
+
+/* ===== Sticky mobile CTA — reveal on scroll (added 2026-07-01) ===== */
+.sticky-cta{transform:translateY(160%);opacity:0;pointer-events:none;transition:transform .35s ease,opacity .35s ease;will-change:transform}
+.sticky-cta.show{transform:none;opacity:1;pointer-events:auto}
+@media (prefers-reduced-motion:reduce){.sticky-cta{transition:none}}
