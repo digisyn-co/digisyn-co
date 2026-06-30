@@ -176,3 +176,21 @@
   .browser.built .mock-p,.browser.built .mock-p.short,.browser.built .mock-cta,
   .browser.built .mock-card,.browser.built .browser-publish{animation:none;opacity:1;transform:none;}
 }
+
+/* ===== Mobile hero polish — added 2026-06-30 ===== */
+@media (max-width:640px){
+  /* Proof chips were floating over the browser's URL bar on small screens.
+     Drop them out of absolute positioning and lay them in a centered row
+     below the browser mockup so nothing overlaps. */
+  .hero-visual{display:flex;flex-wrap:wrap;justify-content:center;align-items:flex-start;gap:12px;max-width:460px}
+  .hero-visual .browser{flex:0 0 100%;transform:none;margin:0}
+  .hero-visual:hover .browser{transform:none}
+  .hero-chip{position:static;animation:none;box-shadow:0 6px 20px rgba(0,0,0,.12)}
+  .hero-chip.tl,.hero-chip.br{top:auto;left:auto;right:auto;bottom:auto}
+
+  /* Decorative rings were cutting across the headline on mobile — keep them
+     subtle and out of the text. */
+  .hero-ring-1{width:220px;height:220px;top:-64px;left:-84px;opacity:.5}
+  .hero-ring-2{width:120px;height:120px;bottom:36px;right:-12px;opacity:.45}
+  .hero-ring-3{display:none}
+}
