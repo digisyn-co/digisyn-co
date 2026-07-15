@@ -18,6 +18,11 @@ RewriteRule ^the-always-on-brand-how-to-stay-visible-online-without-doing-it-you
 RewriteRule ^why-work-with-us/?$ /about/ [R=301,L]
 RewriteRule ^templates(\.html)?/?$ /pricing/ [R=301,L]
 
+# ── Consolidated location pages (Jul 2026): thin city pages 301 to country hubs
+RewriteRule ^locations/(austin|baltimore|boston|charlotte|chicago|columbus|dallas|denver|el-paso|fort-worth|houston|las-vegas|los-angeles|louisville|memphis|milwaukee|nashville|new-york|oklahoma-city|philadelphia|phoenix|portland|san-antonio|san-diego|san-francisco|san-jose|seattle|washington-dc)(\.html|/)?$ /locations/united-states/ [R=301,L]
+RewriteRule ^locations/(calgary|edmonton|halifax|hamilton|montreal|quebec-city|toronto|vancouver|winnipeg)(\.html|/)?$ /locations/canada/ [R=301,L]
+RewriteRule ^locations/(gold-coast|hobart|melbourne)(\.html|/)?$ /locations/australia/ [R=301,L]
+
 # ── Strip legacy .html extension left over from the old flat-file URL
 #    structure (site now uses clean directory URLs, e.g. /about/). Catches
 #    every old /page.html, /blog/post.html, /locations/city.html link still
